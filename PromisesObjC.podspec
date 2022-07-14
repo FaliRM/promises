@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/#{s.module_name}/**/*.{h,m}"
   s.module_map = "Sources/#{s.module_name}/include/framework.modulemap"
   s.pod_target_xcconfig = {
+    'HEADER_SEARCH_PATHS' => "\"${PODS_TARGET_SRCROOT}/Sources/#{s.module_name}/include\"",
     'DEFINES_MODULE' => 'YES',
   }
 
